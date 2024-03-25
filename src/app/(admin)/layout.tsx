@@ -48,8 +48,8 @@ export default function AdminLayout({
           <DashboardNav items={dashboardConfig.sidebarNav} />
         </aside>
         <main className="flex w-full flex-1 flex-col overflow-hidden">
-          <header className="flex items-center">
-            <h1 className="text-4xl m-5 p-4 font-normal">Dashboard</h1>
+          <header className="flex items-center justify-between py-6">
+            <h2 className="text-3xl font-semibold">Dashboard</h2>
             <SessionProvider>
               <FormGenerator />
             </SessionProvider>
