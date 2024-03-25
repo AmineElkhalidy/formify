@@ -23,7 +23,6 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import FormField from "./FormField";
 import { addMoreQuestion, publishForm } from "../actions/mutateForm";
-import { ThemeChange } from "@/components/ui/ThemeChange";
 import FormPublishSucces from "./FormPublishSucces";
 import { deleteForm } from "../actions/mutateForm";
 import { Trash2, RotateCw, RefreshCcw, Loader, Pencil } from "lucide-react";
@@ -111,7 +110,6 @@ const Form = (props: Props) => {
       console.log(response);
       if (response.status === 200) {
         router.push(`/forms/${props.form.formID}/success`);
-        // setSubmittingForm(false);
       } else {
         console.error("Error submitting form");
         alert("Error submitting form. Please try again later");
@@ -177,8 +175,6 @@ const Form = (props: Props) => {
       } else {
         console.log("Response is undefined or null");
       }
-      // setAllQuestions((prevQuestions) => [...prevQuestions, ...resp]);
-      // setTotalQuestions(resp?.length || 0);
     } catch (err) {
       console.log(err);
     } finally {
@@ -195,9 +191,6 @@ const Form = (props: Props) => {
       className="text-center min-w-[320px] md:min-w-[540px] max-w-[620px] border px-8 py-4 rounded-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border-gray-100
     "
     >
-      <div className="hidden">
-        <ThemeChange />
-      </div>
       <div className="flex items-center justify-center gap-2">
         <h1 className="text-3xl font-semibold py-3 text-red">{name}</h1>
 
@@ -239,11 +232,6 @@ const Form = (props: Props) => {
                         <FormLabel className="text-base mt-3 mr-3 flex-1">
                           {index + 1}. {question.text}
                         </FormLabel>
-                        {/* <Pencil
-                          size={20}
-                          className="hover:cursor-pointer"
-                          onClick={() => console.log(question)}
-                        /> */}
                       </div>
                       <FormControl>
                         <FormField
