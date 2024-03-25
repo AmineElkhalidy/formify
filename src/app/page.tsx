@@ -7,7 +7,7 @@ export default async function Home() {
     <SessionProvider>
       <Header />
 
-      <main className="flex min-h-screen flex-col items-center relative p-24 bg:dark z-10 antialiased">
+      <main className="h-[calc(100vh-5rem)] flex items-center justify-center">
         <LandingPage />
       </main>
     </SessionProvider>
