@@ -20,7 +20,7 @@ type Props = {
 
 const FormList = (props: Props) => {
   return (
-    <div className="grid md:grid-cols-2 m-5 p-4 gap-4">
+    <div className="grid md:grid-cols-2 gap-4">
       {props.forms.map((form: Form) => (
         <Card key={form.id} className="max-w-[350px] flex flex-col">
           <CardHeader>

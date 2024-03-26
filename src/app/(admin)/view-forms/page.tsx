@@ -8,8 +8,8 @@ const page = async () => {
   const forms: InferSelectModel<typeof dbForms>[] = await getUserForms();
 
   return (
-    <div>
-      <h3 className="text-2xl font-semibold pl-4">My Forms</h3>
+    <div className="p-4">
+      <h3 className="text-2xl font-semibold mt-6 mb-3">My Forms</h3>
 
       <FormList forms={forms} />
     </div>
