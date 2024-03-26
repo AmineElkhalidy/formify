@@ -19,11 +19,6 @@ export default function AdminLayout({
         icon: "library",
       },
       {
-        title: "Results",
-        href: "/results",
-        icon: "list",
-      },
-      {
         title: "Analytics",
         href: "/analytics",
         icon: "lineChart",
