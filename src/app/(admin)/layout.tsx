@@ -1,7 +1,5 @@
 import Header from "@/components/ui/header";
 import DashboardNav from "@/components/navigation/navbar";
-import { SessionProvider } from "next-auth/react";
-import FormGenerator from "../form-generator";
 import { SidebarNavItem } from "@/types/nav-types";
 
 export default function AdminLayout({
@@ -43,13 +41,6 @@ export default function AdminLayout({
           <DashboardNav items={dashboardConfig.sidebarNav} />
         </aside>
         <main className="flex w-full flex-1 flex-col overflow-hidden">
-          <header className="flex items-center justify-between py-6">
-            <h2 className="text-3xl font-semibold">Dashboard</h2>
-            <SessionProvider>
-              <FormGenerator />
-            </SessionProvider>
-          </header>
-          <hr className="my-4" />
           {children}
         </main>
       </div>
