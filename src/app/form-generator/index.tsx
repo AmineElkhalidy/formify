@@ -45,7 +45,7 @@ const FormGenerator = (props: Props) => {
       setOpen(false);
       navigate(state.data.formId);
     }
-  }, [state?.message]);
+  }, [state]);
 
   const onFormCreate = () => {
     if (session.data?.user) {

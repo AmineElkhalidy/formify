@@ -29,8 +29,8 @@ const Header = async () => {
   const session = await auth();
 
   return (
-    <header className="border bottom-1">
-      <nav className="border-gray-200 px-4 py-3">
+    <header className="border-b shadow-sm">
+      <nav className="border-gray-200 p-4">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link href="/">
             <h1 className="text-xl font-semibold md:text-2xl">Formify</h1>
