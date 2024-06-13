@@ -11,16 +11,15 @@ const page = async () => {
 
   return (
     <>
-      <header className="flex items-center justify-between flex-wrap gap-4 py-6">
+      <header className="flex items-center justify-between flex-wrap gap-4 py-6 border-b">
         <h2 className="text-3xl font-semibold">Dashboard</h2>
         <SessionProvider>
           <FormGenerator />
         </SessionProvider>
       </header>
-      <hr className="my-4" />
 
-      <div>
-        <h3 className="text-2xl font-semibold mt-6 mb-3">My Forms</h3>
+      <div className="mt-10">
+        <h3 className="text-2xl font-semibold mb-3">My Forms</h3>
 
         <FormList forms={forms} />
       </div>
